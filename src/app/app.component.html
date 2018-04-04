@@ -4,10 +4,29 @@
 
   <div class="card my-5">
     <div class="card-body">
- 
+      <div>
+        <p
+          *ngIf="userName"
+           class="welcome">
+           {{ userName }} !
+           </p>
+           <span class="text-center">
+           <button
+            (click)="signIn()"
+            class="btn btn-primary">
+            Sign In
+          </button>
+          </span>
     </div>
   </div>
 </div>
+
+
+<h5>Description :</h5>
+<p style="color:#9c9c9c;font-size:15px">
+  When you click signIn button values are injected from user service which is a Dependency for this 
+  signIn page/component.
+</p>
 
  
 
